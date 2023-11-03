@@ -18,6 +18,8 @@ function addTip(event) {
   var newTotal = calculateTotal(tipAmount, total);
   document.querySelector("#tip-amount").textContent = tipAmount;
   document.querySelector("#new-total").textContent = newTotal.toFixed(2);
+  event.preventDefault();
+  console.log(event);
 }
 
 submitEl.addEventListener("click", addTip);
